@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 
-
 :root {
     --body-bg : #ffffff;
     --font-color : #0000FF;
@@ -11,7 +10,7 @@
     --input-text : #5a656e;
     --btn-login : #FFFFFF;
     --btn-bg : #0000FF;
-    --btn-shadow : #00ff8052;
+    --btn-shadow : #4040ff;
     --shadow-box : #ccd1d5;
     --color-register: #000000;
 }
@@ -31,50 +30,14 @@
 }
 
 
-body {
+* {
+    padding: 0;
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-body * {
     box-sizing: border-box;
 }
 
-.main-login {
-    width: 100vw;
-    height: 100vh;
-    background: var(--body-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.left-login > h1 {
-    font-size: 3vw;
-    color:var(--font-color);
-}
-
-.left-login-image {
-    width: 30vw;
-    
-}
-
-.right-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .checkbox{
@@ -124,19 +87,30 @@ body * {
     color: #f39c12;
 }
 
-.card-login{
-    width: 60%;
+.principal-content {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background: var(--card-login-bg);
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px var(--shadow-box);
+    background-color: var(--body-bg);
 }
 
-.card-login > h1 {
+.content {
+    height: 90%;
+    max-height: 800px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    background-color: var(--body-bg);
+    box-shadow: 0px 10px 40px var(--shadow-box);
+    border-radius: 20px;
+}
+
+.content > h1 {
     color: var(--font-color);
     font-weight: 800;
     margin: 0;
@@ -155,11 +129,11 @@ body * {
     width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     background: var(--input-bg);
     color: var(--textfiel-color);
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px var(--shadow-box);
+    font-size: 11pt;
+    box-shadow: 0px 5px 30px var(--shadow-box);
     outline: none;
     box-sizing: border-box;
 }
@@ -173,61 +147,47 @@ body * {
     color: var(--input-text);
 }
 
-.btn-login {
+.singup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-register {
     width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
+    padding: 10px 20px;
+    margin: 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--btn-login);
     background: var(--btn-bg);
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px var(--btn-shadow);
 }
 
-.register {
-    outline: none;
-    text-decoration: none;
-    display: block;
-    color: var(--color-register);
-    opacity: .8;
-}
-
 @media only screen and (max-width:950px) {
-    .card-login{
-        width: 85%;
+    .content {
+        max-width: 80%;
+        width: 500px;
     }
-}
+} 
 
 @media only screen and (max-width:600px) {
-    .main-login {
-        flex-direction: column;
-    }
-    .left-login > h1 {
-        display: none;
+    .content > h1 {
+        font-size: 25px;
     }
 
-    .left-login {
-        width: 100%;
-        height: auto;
+    .textfield {
+        margin: 5px 0px;
     }
 
-    .right-login {
-        width: 100%;
-        height: auto;
+    .textfield > input {
+        font-size: 10pt;
     }
-
-    .left-login-image {
-        width: 50vw;
-    }
-    
-    .card-login {
-        width: 90%;
-
-    }
-
 }
+
+
